@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Extensions" %>
+
+<h1>Extensions</h1>
+
+<div id="extensions">
+  <% @extensions.each do |extension| %>
+    <%= render extension %>
+    <p>
+      <%= link_to "Show this extension", extension %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New extension", new_extension_path %>
